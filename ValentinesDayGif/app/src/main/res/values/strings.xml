@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ValentinesDayGif</string>
+    <string name="button_start">START</string>
+    <string name="button_more">MORE GIF</string>
 </resources>
