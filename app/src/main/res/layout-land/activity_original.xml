@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/simpledraweeview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/share_layout" />
+
+    <LinearLayout
+        android:id="@+id/share_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+        <com.example.ian.valentinesdaygif.view.MyButtonView
+            style="@style/MyButtonView"
+            android:layout_width="@dimen/share_button_height"
+            android:layout_height="0dp"
+            android:drawableTop="@drawable/ic_facebook"
+            android:text="@string/share_facebook" />
+
+        <com.example.ian.valentinesdaygif.view.MyButtonView
+            style="@style/MyButtonView"
+            android:layout_width="@dimen/share_button_height"
+            android:layout_height="0dp"
+            android:drawableTop="@drawable/ic_instagram"
+            android:text="@string/share_instagram" />
+
+        <com.example.ian.valentinesdaygif.view.MyButtonView
+            style="@style/MyButtonView"
+            android:layout_width="@dimen/share_button_height"
+            android:layout_height="0dp"
+            android:drawableTop="@drawable/ic_twitter"
+            android:text="@string/share_twitter" />
+
+        <com.example.ian.valentinesdaygif.view.MyButtonView
+            style="@style/MyButtonView"
+            android:layout_width="@dimen/share_button_height"
+            android:layout_height="0dp"
+            android:drawableTop="@drawable/ic_google_plus"
+            android:text="@string/share_google_plus" />
+
+        <com.example.ian.valentinesdaygif.view.MyButtonView
+            style="@style/MyButtonView"
+            android:layout_width="@dimen/share_button_height"
+            android:layout_height="0dp"
+            android:drawableTop="@drawable/ic_menu"
+            android:text="@string/share_menu" />
+    </LinearLayout>
+</RelativeLayout>

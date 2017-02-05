@@ -21,10 +21,15 @@
 
         <activity
             android:name=".activity.ListActivity"
-            android:label="@string/button_start" />
+            android:label="@string/gif_list" />
+
         <activity
             android:name=".activity.MoreActivity"
             android:label="@string/button_more" />
+
+        <activity
+            android:name=".activity.OriginalActivity"
+            android:label="@null" />
     </application>
 
 </manifest>

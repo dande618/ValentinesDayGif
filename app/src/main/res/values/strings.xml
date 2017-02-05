@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">ValentinesDayGif</string>
+    <string name="gif_list">Gif</string>
     <string name="base_url">http://api.giphy.com/v1/gifs/search?q=%1$s&amp;api_key=dc6zaTOxFJmzC&amp;limit=%2$d&amp;offset=%3$d</string>
     <!-- -->
     <string name="keyword">valentines+day</string>
     <string name="button_start">START</string>
     <string name="button_more">MORE GIF</string>
+    <string name="share_facebook">Facebook</string>
+    <string name="share_google_plus">Google Plus</string>
+    <string name="share_twitter">Twitter</string>
+    <string name="share_instagram">Instagram</string>
+    <string name="share_menu">More</string>
 </resources>
