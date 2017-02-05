@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import com.example.ian.valentinesdaygif.Logger;
 import com.example.ian.valentinesdaygif.R;
-import com.example.ian.valentinesdaygif.model.data.GifInfo;
+import com.example.ian.valentinesdaygif.model.GifInfo;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;

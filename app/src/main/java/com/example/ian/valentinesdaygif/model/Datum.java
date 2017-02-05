@@ -1,5 +1,5 @@
 
-package com.example.ian.valentinesdaygif.model.data;
+package com.example.ian.valentinesdaygif.model;
 
 import java.util.HashMap;
 import java.util.List;

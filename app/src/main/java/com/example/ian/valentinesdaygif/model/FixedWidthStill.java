@@ -1,9 +1,9 @@
-package com.example.ian.valentinesdaygif.model.data;
+package com.example.ian.valentinesdaygif.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Downsized {
+public class FixedWidthStill {
 
     @SerializedName("url")
     @Expose

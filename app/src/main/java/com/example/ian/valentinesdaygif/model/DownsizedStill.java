@@ -1,9 +1,9 @@
-package com.example.ian.valentinesdaygif.model.data;
+package com.example.ian.valentinesdaygif.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Original {
+public class DownsizedStill {
 
     @SerializedName("url")
     @Expose
@@ -17,8 +17,5 @@ public class Original {
     @SerializedName("size")
     @Expose
     public String size;
-    @SerializedName("hash")
-    @Expose
-    public String hash;
 
 }
