@@ -7,9 +7,9 @@ import android.widget.ImageView;
 
 import com.example.ian.valentinesdaygif.R;
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.drawable.ProgressBarDrawable;
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
-import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 
@@ -37,6 +37,7 @@ public class OriginalActivity extends AppCompatActivity {
         mSimpleDraweeView.setAspectRatio(aspectRatio);
         GenericDraweeHierarchy hierarchy = mSimpleDraweeView.getHierarchy();
         hierarchy.setActualImageScaleType(ScalingUtils.ScaleType.FIT_CENTER);
+        hierarchy.setProgressBarImage(new ProgressBarDrawable());
         mSimpleDraweeView.setAdjustViewBounds(true);
     }
 }
