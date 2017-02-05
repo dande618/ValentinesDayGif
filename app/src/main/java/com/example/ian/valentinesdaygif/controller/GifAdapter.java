@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import com.example.ian.valentinesdaygif.Logger;
 import com.example.ian.valentinesdaygif.R;
 import com.example.ian.valentinesdaygif.model.data.GifInfo;
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
@@ -38,9 +40,16 @@ public class GifAdapter extends RecyclerView.Adapter<GifAdapter.GifViewHolder> {
     @Override
     public void onBindViewHolder(GifViewHolder holder, int position) {
         GifInfo gifInfo = mGifInfoList.get(position);
-        if (null != gifInfo.images && null != gifInfo.images.fixedWidth
+        if (null != gifInfo.images && null != gifInfo.images.fixedWidthSmall
                 && null != gifInfo.images.fixedWidth.url) {
-            holder.simpleDraweeView.setImageURI(Uri.parse(gifInfo.images.fixedWidth.url));
+            Logger.d("onBindViewHolder setImageURI " + gifInfo.images.fixedWidthSmall.url);
+            DraweeController controller = Fresco.newDraweeControllerBuilder()
+                    .setAutoPlayAnimations(true)
+                    .setUri(Uri.parse(gifInfo.images.fixedWidthSmall.url))
+                    .build();
+            holder.simpleDraweeView.setController(controller);
+            holder.simpleDraweeView.setAspectRatio(
+                    Float.valueOf(gifInfo.images.fixedWidthSmall.width) / Integer.valueOf(gifInfo.images.fixedWidthSmall.height));
         } else {
             Logger.d("onBindViewHolder url null");
         }

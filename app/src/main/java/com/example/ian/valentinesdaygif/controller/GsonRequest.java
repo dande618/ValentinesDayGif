@@ -1,4 +1,4 @@
-package com.example.ian.valentinesdaygif.model;
+package com.example.ian.valentinesdaygif.controller;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">ValentinesDayGif</string>
+    <string name="base_url">http://api.giphy.com/v1/gifs/search?q=%1$s&amp;api_key=dc6zaTOxFJmzC&amp;limit=%2$d&amp;offset=%3$d</string>
+    <!-- -->
+    <string name="keyword">valentines+day</string>
     <string name="button_start">START</string>
     <string name="button_more">MORE GIF</string>
 </resources>
