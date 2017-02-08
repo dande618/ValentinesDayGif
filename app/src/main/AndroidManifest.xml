@@ -30,6 +30,8 @@
         <activity
             android:name=".activity.OriginalActivity"
             android:label="@null" />
+        
+        <activity android:name=".activity.SearchActivity" />
     </application>
 
 </manifest>

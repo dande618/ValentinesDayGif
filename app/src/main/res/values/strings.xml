@@ -11,4 +11,6 @@
     <string name="share_twitter">Twitter</string>
     <string name="share_instagram">Instagram</string>
     <string name="share_menu">More</string>
+
+    <string name="hint_keyword_empty">Keyword is empty.</string>
 </resources>

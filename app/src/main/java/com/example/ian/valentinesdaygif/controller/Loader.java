@@ -36,12 +36,14 @@ public class Loader {
     private String mBaseUrl = "";
 
     private boolean mIsLoadingMore = false;
+    private boolean mIsSearchMode = false;
 
-    public Loader(Context context) {
+    public Loader(Context context, String keyword) {
         mContext = context;
         mAdapter = new GifAdapter(mContext);
         mLimit = mContext.getResources().getInteger(R.integer.page_limit);
-        mKeyword = mContext.getString(R.string.keyword);
+        mKeyword = null == keyword ? mContext.getString(R.string.keyword) : keyword;
+        mIsSearchMode = keyword != null;
         mBaseUrl = mContext.getString(R.string.base_url);
     }
 
@@ -67,13 +69,13 @@ public class Loader {
                 if (mIsLoadingMore) {
                     Logger.d("ignore manually update!");
                 } else {
-                    load();
+                    load(null);
                 }
             }
         }
     }
 
-    public void load() {
+    public void load(final OnFinishListener listener) {
         if (mIsLoadingMore) {
             Logger.d("loading more. exit.");
             return;
@@ -90,7 +92,7 @@ public class Loader {
                         int size = result.getGifInfoList().size();
                         mCurrentOffset += size;
                         if (0 == size) {
-                            Toast.makeText(mContext, "No more gifs.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, mIsSearchMode ? "No gif found." : "No more gif.", Toast.LENGTH_SHORT).show();
                         } else {
                             prefetch(result.getGifInfoList());
                             mAdapter.addAll(result.getGifInfoList());
@@ -120,4 +122,9 @@ public class Loader {
             Fresco.getImagePipeline().prefetchToDiskCache(request, null);
         }
     }
+
+    public interface OnFinishListener {
+        void onFinish(boolean found);
+    }
+
 }
